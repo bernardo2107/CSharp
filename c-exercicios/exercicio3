@@ -1,0 +1,184 @@
+using System;
+namespace Lista_03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*a) Crie um programa que peça ao usuário para digitar dois números inteiros e
+            exiba se o primeiro número é maior que o segundo número.*/
+            Console.WriteLine("A) Digite 2 numeros separadamente e o programa mostrara se o primeiro numero e maior que o segundo. ");
+            int primeiro = int.Parse(Console.ReadLine());
+            int segundo = int.Parse(Console.ReadLine());
+            if (primeiro > segundo)
+            {
+                Console.WriteLine("O primeiro numero digitado e maior que o segundo.");
+            }
+            else
+            {
+                Console.WriteLine("O primeiro numero não é o maior.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*b) Crie um programa que peça ao usuário para digitar dois números inteiros e
+            exiba se o primeiro número é menor que o segundo número.*/
+            Console.WriteLine("B) Digite 2 numeros separadamente e o programa mostrara se o primeiro numero e menor que o segundo. ");
+            int primeiro1 = int.Parse(Console.ReadLine());
+            int segundo1 = int.Parse(Console.ReadLine());
+            if (primeiro1 < segundo1)
+            {
+                Console.WriteLine("O primeiro numero digitado e menor que o segundo.");
+            }
+            else
+            {
+                Console.WriteLine("O primeiro numero não é o menor.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*c) Crie um programa que peça ao usuário para digitar dois números inteiros e
+            exiba se eles são iguais.*/
+            Console.WriteLine("C) Digite 2 numeros separadamente e o programa mostrara se são iguais. ");
+            int primeiro2 = int.Parse(Console.ReadLine());
+            int segundo2 = int.Parse(Console.ReadLine());
+            if (primeiro2 == segundo2)
+            {
+                Console.WriteLine("Os numeros digitado são iguais.");
+            }
+            else
+            {
+                Console.WriteLine("Os numeros digitados são diferentes.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*d) Crie um programa que peça ao usuário para digitar três números inteiros e
+            exiba se o primeiro número é menor que o segundo número e maior que o
+            terceiro número.*/
+            Console.WriteLine("D) Digite 3 numeros separadamente e o programa mostrara se o primeiro e menor que o segundo, mas maior que o terceiro.");
+            int i1 = int.Parse(Console.ReadLine());
+            int i2 = int.Parse(Console.ReadLine());
+            int i3 = int.Parse(Console.ReadLine());
+            if (i1 < i2 && i1 > i3)
+            {
+                Console.WriteLine("O primeiro numero é menor que o segundo, mas maior que o terceiro.");
+            }
+            else
+            {
+                Console.WriteLine("O primeiro numero e maior que o segundo ou menor que o terceiro numero.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+            
+            /*e) Crie um programa que peça ao usuário para digitar dois números de ponto
+            flutuante e exiba se o primeiro número é maior ou igual ao segundo número.*/
+            Console.WriteLine("E) Digite dois numeros quebrados(12,5) separadamente e o programa mostrara se o primeiro e maior ou igual ao segundo.");
+            float primeiro3 = float.Parse(Console.ReadLine());
+            float segundo3 = float.Parse(Console.ReadLine());
+            if (primeiro3 > segundo3)
+            {
+                Console.WriteLine("O primeiro numero é maior que o segundo.");
+            }
+            else if (primeiro3 == segundo3)
+            {
+                Console.WriteLine("O primeiro numero é igual ao segundo.");
+            }
+            else
+            {
+                Console.WriteLine("O primeiro numero não é maior nem igual ao segundo.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*f) Crie um programa que peça ao usuário para digitar um número inteiro e
+            exiba se ele é par ou ímpar.*/
+            Console.WriteLine("F) Digite um numero e o programa falara se é par ou impar.");
+            int poi = int.Parse(Console.ReadLine());
+            if (poi % 2 == 0)
+            {
+                Console.WriteLine("O numero digitado é par.");
+            }
+            else
+            {
+                Console.WriteLine("O numero digitado é impar.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*g) Crie um programa que peça ao usuário para digitar dois números de ponto
+            flutuante e exiba se o primeiro número é menor ou igual ao segundo número.*/
+            Console.WriteLine("G) Digite dois numeros quebrados(12,5) separadamente e o programa mostrara se o primeiro é menor ou igual ao segundo.");
+            float primeiro4 = float.Parse(Console.ReadLine());
+            float segundo4 = float.Parse(Console.ReadLine());
+            if (primeiro4 < segundo4)
+            {
+                Console.WriteLine("O primeiro numero é menor que o segundo.");
+            }
+            else if (primeiro4 == segundo4)
+            {
+                Console.WriteLine("O primeiro numero é igual ao segundo.");
+            }
+            else
+            {
+                Console.WriteLine("O primeiro numero não é menor nem igual ao segundo.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*h) Crie um programa que peça ao usuário para digitar um número inteiro e
+            exiba se ele é positivo ou negativo.*/
+            Console.WriteLine("H) Digite um numero e o programa mostrara se é positivo ou negativo.");
+            int pon = int.Parse(Console.ReadLine());
+            if (pon < 0)
+            {
+                Console.WriteLine("O numero digitado é negativo.");
+            }
+            else
+            {
+                Console.WriteLine("O numero digitado é positivo.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*i) Crie um programa que peça ao usuário para digitar dois números inteiros e
+            exiba se a diferença entre eles é menor ou igual a 10.*/
+            Console.WriteLine("I) Digite 2 numeros e o programa falara se a diferença entre eles e menor ou igual a 10.");
+            int primeiro5 = int.Parse(Console.ReadLine());
+            int segundo5 = int.Parse(Console.ReadLine());
+            primeiro5 = Math.Abs(primeiro5 - segundo5);
+            if (primeiro5 <= 10)
+            {
+                Console.WriteLine("Os numeros possuem uma diferença menor ou igual a 10.");
+            }
+            else
+            {
+                Console.WriteLine("Os numeros possuem uma diferença maior que 10.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*j) Crie um programa que peça ao usuário para digitar um número de ponto
+            flutuante e exiba se ele é igual a zero.*/
+            Console.WriteLine("J) Digite um numero quebrado(3,5) e o programa mostrara se ele é igual a 0");
+            float ia0 = float.Parse(Console.ReadLine());
+            if (ia0 == 0)
+            {
+                Console.WriteLine("O numero é igual a 0.");
+            }
+            else
+            {
+                Console.WriteLine("O numero não é igual a 0.");
+            }
+        }
+    }
+}

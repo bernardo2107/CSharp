@@ -1,0 +1,131 @@
+/*Console.WriteLine("Digite um numero ");
+int numero; 
+numero = int.Parse(Console.ReadLine());
+bool par = numero %2 == 0;
+if (par) { Console.WriteLine("Seu número e par " + numero); }
+else { Console.WriteLine("Seu número não e par "); }
+*/
+
+
+/*Console.WriteLine("Digite um numero ");
+ int n1; 
+  n1  = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite o segundo numero");
+ int  n2;
+ n2  = int.Parse(Console.ReadLine());
+bool maior = n1 > n2;
+if (maior) { Console.WriteLine("o primeiro numero e maior "+n1); }
+else { Console.WriteLine("o segundo numero e maior "+n2); }
+*/
+/*Console.WriteLine("Digite alguma coisa ou não");
+
+ string tex = Console.ReadLine();
+
+  bool vazio = tex != "" ;
+
+ if (vazio) { Console.WriteLine("seu texto nao esta vazio "+tex); }
+  else { Console.WriteLine("Seu texto esta vazio"); }
+*/
+
+
+/*Console.WriteLine("Digite alguma coisa ou não");
+Console.WriteLine("Digite algum numero");
+
+int n = int.Parse(Console.ReadLine());
+
+bool valido = n != 0;
+
+if (valido)
+{
+    Console.WriteLine("Você digitou: " + n);
+}
+else
+{
+    Console.WriteLine("Você digitou zero.");
+} */
+
+/*
+Console.WriteLine("digite sua idade");
+
+int idade;
+ 
+idade=int.Parse(Console.ReadLine());
+ 
+bool n6 = idade > 18; 
+
+if (n6) { Console.WriteLine("Bem vindo, sua idade e compativel"); }
+ else { Console.WriteLine("Infelizmente sua idade não e compativel "); }
+*/
+
+
+/* Console.WriteLine("Digite um número:");
+
+int n = int.Parse(Console.ReadLine());
+
+bool negativo = n < 0;
+
+if (negativo)
+{
+    n = n * -1;
+}
+
+Console.WriteLine("O valor absoluto é: " + n);
+*/
+
+
+/*Console.WriteLine("Digite um numero ");
+int nu1;
+nu1=int.Parse(Console.ReadLine());
+
+bool positivo = nu1 > 0;
+bool negativo = nu1 < 0;
+bool zero = nu1 == 0;
+
+if (nu1 == 0) 
+ { Console.WriteLine("Seu numero e igual a zero"); }
+ else if (negativo) 
+   { Console.WriteLine("Seu numero e negativo "); }
+else 
+        { Console.WriteLine("Seu numero e positivo "); }
+*/
+
+
+
+/*Console.WriteLine("Digite um número: ");
+string entrada = Console.ReadLine();
+
+if (int.TryParse(entrada, out int numero))
+{
+    Console.WriteLine($"Conversão deu certo! O número é: {numero}");
+}
+else
+{
+    Console.WriteLine("Erro: Você não digitou um número válido!");
+}
+*/
+
+
+/*Console.WriteLine("Digite um número");
+int n1, n2;
+n1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite o segundo numero");
+n2=int.Parse(Console.ReadLine());
+
+bool divisao = (n1 % n2 == 0);
+if (divisao) { Console.WriteLine("sua divisao e = 0"); }
+else { Console.WriteLine("O resultado não e 0"); }
+*/
+
+
+Console.WriteLine("Digite um texto "); 
+string tex = Console.ReadLine();
+bool estaVazio = string.IsNullOrEmpty(tex);
+
+if (estaVazio)
+{
+    Console.WriteLine("Você não digitou nada (ou o texto é nulo).");
+}
+else
+{
+    Console.WriteLine($"Texto digitado: {tex}");
+}

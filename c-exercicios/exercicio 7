@@ -1,0 +1,267 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Atividades_c_
+{
+    internal class Lista7
+
+    {
+        // ---------- Funções auxiliares ----------
+        static int LerInteiro(string mensagem)
+        {
+            int valor;
+            Console.Write(mensagem);
+            while (!int.TryParse(Console.ReadLine(), out valor))
+            {
+                Console.Write("Valor inválido. Digite um número inteiro: ");
+            }
+            return valor;
+        }
+
+        static int LerInteiroPositivo(string mensagem)
+        {
+            int valor = LerInteiro(mensagem);
+            while (valor <= 0)
+            {
+                valor = LerInteiro("O número deve ser positivo. Tente novamente: ");
+            }
+            return valor;
+        }
+
+        // ================== EXERCÍCIOS ORIGINAIS (while) ==================
+
+        // a) Pares entre 0 e o número inserido
+        static void ExercicioA()
+        {
+            int numero = LerInteiroPositivo("Digite um número inteiro positivo: ");
+
+            Console.WriteLine($"Números pares entre 0 e {numero}:");
+            int i = 0;
+            while (i <= numero)
+            {
+                Console.Write(i + " ");
+                i += 2;
+            }
+            Console.WriteLine();
+        }
+
+        // b) Tabuada até 10
+        static void ExercicioB()
+        {
+            int numero = LerInteiro("Digite um número inteiro: ");
+
+            Console.WriteLine($"Tabuada do {numero}:");
+            int i = 1;
+            while (i <= 10)
+            {
+                Console.WriteLine($"{numero} x {i} = {numero * i}");
+                i++;
+            }
+        }
+
+        // c) Soma de uma sequência de números (termina com 0)
+        static void ExercicioC()
+        {
+            int soma = 0;
+            int numero = LerInteiro("Digite um número (0 para encerrar): ");
+
+            while (numero != 0)
+            {
+                soma += numero;
+                numero = LerInteiro("Digite outro número (0 para encerrar): ");
+            }
+
+            Console.WriteLine($"Soma dos números: {soma}");
+        }
+
+        // d) Senha com até 3 tentativas
+        static void ExercicioD()
+        {
+            const string senhaCorreta = "1234"; // senha usada no exercício
+            int tentativas = 0;
+            bool acertou = false;
+
+            while (tentativas < 3 && !acertou)
+            {
+                Console.Write("Digite a senha: ");
+                string senha = Console.ReadLine();
+                tentativas++;
+
+                if (senha == senhaCorreta)
+                {
+                    acertou = true;
+                }
+                else if (tentativas < 3)
+                {
+                    Console.WriteLine($"Senha incorreta. Tentativas restantes: {3 - tentativas}");
+                }
+            }
+
+            Console.WriteLine(acertou
+                ? "Senha correta! Acesso liberado."
+                : "Senha incorreta! Número de tentativas esgotado.");
+        }
+
+        // e) Soma até digitar um número negativo (o negativo não entra na soma)
+        static void ExercicioE()
+        {
+            int soma = 0;
+            int numero = LerInteiro("Digite um número (negativo para encerrar): ");
+
+            while (numero >= 0)
+            {
+                soma += numero;
+                numero = LerInteiro("Digite outro número (negativo para encerrar): ");
+            }
+
+            Console.WriteLine($"Soma dos números (sem o negativo): {soma}");
+        }
+
+        // ================== EXERCÍCIOS REPETIDOS (do...while) ==================
+
+        // f, g, l) Mesmo enunciado do (a), agora com do...while
+        static void ExercicioFGL()
+        {
+            int numero;
+            do
+            {
+                numero = LerInteiro("Digite um número inteiro positivo: ");
+            } while (numero <= 0);
+
+            Console.WriteLine($"Números pares entre 0 e {numero}:");
+            int i = 0;
+            do
+            {
+                Console.Write(i + " ");
+                i += 2;
+            } while (i <= numero);
+            Console.WriteLine();
+        }
+
+        // h) Mesmo enunciado do (b), agora com do...while
+        static void ExercicioH()
+        {
+            int numero = LerInteiro("Digite um número inteiro: ");
+
+            Console.WriteLine($"Tabuada do {numero}:");
+            int i = 1;
+            do
+            {
+                Console.WriteLine($"{numero} x {i} = {numero * i}");
+                i++;
+            } while (i <= 10);
+        }
+
+        // i) Mesmo enunciado do (c), agora com do...while (pergunta se quer continuar)
+        static void ExercicioI()
+        {
+            int soma = 0;
+            string continuar;
+
+            do
+            {
+                int numero = LerInteiro("Digite um número inteiro: ");
+                soma += numero;
+
+                Console.Write("Deseja inserir outro número? (s/n): ");
+                continuar = (Console.ReadLine() ?? "").Trim().ToLower();
+            } while (continuar == "s");
+
+            Console.WriteLine($"Soma dos números: {soma}");
+        }
+
+        // j) Mesmo enunciado do (d), agora com do...while
+        static void ExercicioJ()
+        {
+            const string senhaCorreta = "1234";
+            int tentativas = 0;
+            bool acertou = false;
+
+            do
+            {
+                Console.Write("Digite a senha: ");
+                string senha = Console.ReadLine();
+                tentativas++;
+
+                if (senha == senhaCorreta)
+                {
+                    acertou = true;
+                }
+                else if (tentativas < 3)
+                {
+                    Console.WriteLine($"Senha incorreta. Tentativas restantes: {3 - tentativas}");
+                }
+            } while (tentativas < 3 && !acertou);
+
+            Console.WriteLine(acertou
+                ? "Senha correta! Acesso liberado."
+                : "Senha incorreta! Número de tentativas esgotado.");
+        }
+
+        // k) Mesmo enunciado do (e), agora com do...while
+        static void ExercicioK()
+        {
+            int soma = 0;
+            int numero;
+
+            do
+            {
+                numero = LerInteiro("Digite um número (negativo para encerrar): ");
+                if (numero >= 0)
+                {
+                    soma += numero;
+                }
+            } while (numero >= 0);
+
+            Console.WriteLine($"Soma dos números (sem o negativo): {soma}");
+        }
+
+        // ---------- Menu principal ----------
+        static void Main()
+        {
+            bool executando = true;
+
+            while (executando)
+            {
+                Console.WriteLine("\n===== LISTA 07 - WHILE / DO...WHILE =====");
+                Console.WriteLine("a) Pares de 0 até N (while)");
+                Console.WriteLine("b) Tabuada (while)");
+                Console.WriteLine("c) Soma de sequência (while)");
+                Console.WriteLine("d) Senha com 3 tentativas (while)");
+                Console.WriteLine("e) Soma até negativo (while)");
+                Console.WriteLine("f/g/l) Pares de 0 até N (do...while)");
+                Console.WriteLine("h) Tabuada (do...while)");
+                Console.WriteLine("i) Soma de sequência (do...while)");
+                Console.WriteLine("j) Senha com 3 tentativas (do...while)");
+                Console.WriteLine("k) Soma até negativo (do...while)");
+                Console.WriteLine("s) Sair");
+                Console.Write("Escolha: ");
+
+                string opcao = (Console.ReadLine() ?? "").Trim().ToLower();
+                Console.WriteLine();
+
+                switch (opcao)
+                {
+                    case "a": ExercicioA(); break;
+                    case "b": ExercicioB(); break;
+                    case "c": ExercicioC(); break;
+                    case "d": ExercicioD(); break;
+                    case "e": ExercicioE(); break;
+                    case "f":
+                    case "g":
+                    case "l": ExercicioFGL(); break;
+                    case "h": ExercicioH(); break;
+                    case "i": ExercicioI(); break;
+                    case "j": ExercicioJ(); break;
+                    case "k": ExercicioK(); break;
+                    case "s": executando = false; break;
+                    default: Console.WriteLine("Opção inválida."); break;
+                }
+            }
+        }
+    }
+   }
+    

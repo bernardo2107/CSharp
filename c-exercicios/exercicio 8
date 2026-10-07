@@ -1,0 +1,227 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 0; i <= 100; i += 2)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite um número inteiro positivo: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i <= numero; i += 2)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite uma palavra: ");
+        string palavra = Console.ReadLine();
+
+        for (int i = 0; i < palavra.Length; i++)
+        {
+            Console.WriteLine(palavra[i]);
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite um número inteiro positivo: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        int soma = 0;
+
+        for (int i = 1; i <= numero; i++)
+        {
+            soma += i;
+        }
+
+        Console.WriteLine($"A soma é: {soma}");
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite um número inteiro: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        bool primo = true;
+
+        if (numero < 2)
+        {
+            primo = false;
+        }
+        else
+        {
+            for (int i = 2; i < numero; i++)
+            {
+                if (numero % i == 0)
+                {
+                    primo = false;
+                    break;
+                }
+            }
+        }
+
+        if (primo)
+        {
+            Console.WriteLine("O número é primo.");
+        }
+        else
+        {
+            Console.WriteLine("O número não é primo.");
+        }
+    }
+}
+
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Quantos números você deseja inserir? ");
+        int quantidade = int.Parse(Console.ReadLine());
+
+        Console.Write("Digite o primeiro número: ");
+        int maior = int.Parse(Console.ReadLine());
+
+        for (int i = 2; i <= quantidade; i++)
+        {
+            Console.Write("Digite o próximo número: ");
+            int numero = int.Parse(Console.ReadLine());
+
+            if (numero > maior)
+            {
+                maior = numero;
+            }
+        }
+
+        Console.WriteLine($"O maior número é: {maior}");
+    }
+}
+*/
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int numero = 5; numero <= 10; numero++)
+        {
+            Console.WriteLine($"\nTabuada do {numero}:");
+
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{numero} x {i} = {numero * i}");
+            }
+        }
+    }
+}
+*/
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite um número inteiro positivo: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        Console.WriteLine($"Divisores de {numero}:");
+
+        for (int i = 1; i <= numero; i++)
+        {
+            if (numero % i == 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+*/
+
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int numero = 2; numero <= 100; numero++)
+        {
+            bool primo = true;
+
+            for (int i = 2; i < numero; i++)
+            {
+                if (numero % i == 0)
+                {
+                    primo = false;
+                    break;
+                }
+            }
+
+            if (primo)
+            {
+                Console.WriteLine(numero);
+            }
+        }
+    }
+}*/
+
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        int soma = 0;
+
+        for (int i = 1; i <= 100; i++)
+        {
+            if (i % 2 == 0)
+            {
+                soma += i;
+            }
+        }
+
+        Console.WriteLine($"A soma dos números pares entre 1 e 100 é: {soma}");
+    }
+}
+
+*/

@@ -1,0 +1,121 @@
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.ConstrainedExecution;
+using System;
+
+using System; // A instrução "using" importa a biblioteca necessária para usar o Console.
+ //class Program // Definimos uma classe chamada "Program". Em C#, a execução do código
+//sempre começa na classe 'Program'.
+
+Console.WriteLine("Olá, Mundo!"); // Exibe a mensagem "Olá, Mundo!" no
+
+Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o terminal.
+                   
+
+        int idade = 25; // A variável 'idade' é declarada e recebe o valor 25.
+        string nome = "João"; // A variável 'nome' armazena uma string com o valor "João".
+      
+    double altura = 1.75; // A variável 'altura' armazena um número decimal (tipo double).
+
+        Console.WriteLine("Nome: " + nome); // Exibe o nome na tela.
+        Console.WriteLine("Idade: " + idade); // Exibe a idade na tela.
+        Console.WriteLine("Altura: " + altura); // Exibe a altura na tela.
+        Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o terminal.
+
+
+      int a = 10, b = 5; // Declara duas variáveis 'a' e 'b' e atribui os valores 10 e 5, respectivamente.
+
+int soma = a + b; // A variável 'soma' armazena o resultado da soma de 'a' e 'b'.
+
+    int produto = a * b; // A variável 'produto' armazena o resultado da multiplicação de 'a' e 'b'.
+
+Console.WriteLine("Soma: " + soma); // Exibe o resultado da soma no terminal.
+        Console.WriteLine("Produto: " + produto); // Exibe o resultado do produto no  terminal.
+Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o  terminal.
+       
+   
+        Console.Write("Digite seu nome: "); // Solicita que o usuário digite seu nome.
+        string Nnome = Console.ReadLine(); // Lê o nome digitado pelo usuário e  armazena na variável 'nome'.
+    Console.WriteLine("Olá, " + Nnome + "!"); // Exibe a saudação personalizada  para o nome informado.
+    Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o  terminal.
+
+
+   
+        Console.Write("Digite sua idade: "); // Solicita ao usuário que informe a idade.
+
+        int idade = int.Parse(Console.ReadLine()); // Lê a idade informada e converte para inteiro.
+
+        if (idade >= 18) // Se a idade for maior ou igual a 18, o código dentro do if será executado.
+
+            Console.WriteLine("Você é maior de idade.");
+            // Exibe se a pessoa é maior de idade.
+
+else // Caso a condição não seja verdadeira (idade < 18), executa o código  abaixo.
+
+            Console.WriteLine("Você é menor de idade."); // Exibe se a pessoa é menor de idade.
+           
+        Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o terminal.
+           
+    
+    static void Main() // Ponto de entrada no método Main.
+    {
+        for (int i = 1; i <= 5; i++) // Laço que começa em 1 e vai até 5.
+        {
+            Console.WriteLine("Contagem: " + i); // Exibe o valor de i a cada iteração.
+            }
+
+            Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o terminal.
+
+        
+
+        int i = 1; // Inicializa a variável 'i' com valor 1.
+        while (i <= 5) // O laço irá se repetir enquanto 'i' for menor ou igual a 5.
+        {
+            Console.WriteLine("Contagem: " + i); // Exibe o valor de 'i'.
+            i++; // Incrementa o valor de 'i' a cada repetição.
+        }
+        Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o terminal.
+
+        
+
+        Saudacao(); // Chama a função Saudacao, que será definida abaixo.
+        Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o terminal.
+
+    }
+    static void Saudacao() // Define o método "Saudacao", que exibe uma mensagem de boas-vindas.
+
+    {
+
+Console.WriteLine("Bem-vindo ao programa!"); // Exibe a mensagem de boas- vindas no terminal.
+
+
+        Console.Write("Digite o primeiro número: "); // Solicita o primeiro número.
+        double num1 = double.Parse(Console.ReadLine()); // Lê o primeiro número e  converte para double.
+
+        Console.Write("Digite o segundo número: "); // Solicita o segundo número.
+        double num2 = double.Parse(Console.ReadLine()); // Lê o segundo número e converte para double.
+
+        double soma = num1 + num2; // Realiza a soma dos dois números.
+        double subtracao = num1 - num2; // Realiza a subtração.
+        double multiplicacao = num1 * num2; // Realiza a multiplicação.
+        double divisao = num1 / num2; // Realiza a divisão.
+        Console.WriteLine("Soma: " + soma + ", Subtração: " + subtracao + 
+       " Multiplicação: " + multiplicacao + ", Divisão: " + divisao); // Exibe os resultados  das operações.
+
+
+        Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o
+       // terminal.
+    
+    
+        string senhaCorreta = "senha123"; // A senha correta que será comparada.
+        Console.Write("Digite a senha: "); // Solicita a senha ao usuário.
+        string senha = Console.ReadLine(); // Lê a senha digitada.
+        if (senha == senhaCorreta) // Verifica se a senha digitada é a correta.
+        {
+            Console.WriteLine("Senha correta! Acesso permitido."); // Exibe mensagem de acesso permitido.
+
+        }
+        else // Se a senha não for correta, exibe a mensagem de erro.
+        {
+            Console.WriteLine("Senha incorreta! Acesso negado.");
+        }
+        Console.ReadLine(); // Aguarda o usuário pressionar Enter antes de fechar o terminal.

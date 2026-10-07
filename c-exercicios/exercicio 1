@@ -1,0 +1,128 @@
+
+using System.ComponentModel;
+using System.Runtime.Intrinsics.Arm;
+
+//Peça ao usuário para digitar um número inteiro e armazene-o em uma
+variável int. Em seguida, exiba o valor da variável na tela.
+
+Console.WriteLine("digite um numero inteiro");
+int num;
+num = int.Parse(Console.ReadLine());
+Console.WriteLine("seu numero e " + num);
+
+
+//Peça ao usuário para digitar um número real e armazene-o em uma variável
+double. Em seguida, exiba o valor da variável na tela.
+
+Console.WriteLine("Digite um numero real");
+double num1;
+num1 = double.Parse(Console.ReadLine());
+Console.WriteLine("Seu numero e " + num1);
+
+//Peça ao usuário para digitar um número de ponto flutuante e armazene-o em
+uma variável float. Em seguida, exiba o valor da variável na tela.
+
+Console.WriteLine("Digite um numero com ponto flutuante");
+float num2;
+num2 = float.Parse(Console.ReadLine());
+Console.WriteLine("Seu numero e "+ num2);
+
+//Peça ao usuário para digitar &quot;sim&quot; ou &quot;não&quot; e armazene-o em uma variável
+bool. Em seguida, exiba o valor da variável na tela.
+
+Console.WriteLine("Digite sim ou nao ");
+string resposta;
+bool opcao;
+resposta = Console.ReadLine();
+if (resposta == "sim")
+{
+    opcao = true;
+
+    Console.WriteLine("Aprovado");
+}
+else if (resposta == "nao")
+{
+    opcao = false;
+
+    Console.WriteLine("Reprovado");
+
+}else { Console.WriteLine("Opcao invalida "); }
+
+//Peça ao usuário para digitar um caractere e armazene-o em uma variável
+char. Em seguida, exiba o valor da variável na tela.
+
+Console.WriteLine("Digite um caracter");
+char R;
+R = char.Parse(Console.ReadLine());
+Console.WriteLine("Seu caracter e " +R);
+
+
+//Peça ao usuário para digitar um número decimal e armazene-o em uma
+variável decimal. Em seguida, exiba o valor da variável na tela.
+
+Console.WriteLine("Digite um numero decimal");
+decimal P;
+P = decimal.Parse(Console.ReadLine());
+Console.WriteLine("Resposta " + P);
+
+// Peça ao usuário para digitar o seu nome e a sua idade, e armazene-os em
+variáveis string e int, respectivamente. Em seguida, exiba essas informações
+na tela.
+
+Console.WriteLine("Digite seu nome ");
+string nome;
+nome = Console.ReadLine();
+
+Console.WriteLine("Digite sua idade");
+int idade;
+idade = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Seu nome e " + nome + " e sua idade e " + idade);
+
+Console.WriteLine("Digite o preco do produto ");
+double produto;
+produto = double.Parse(Console.ReadLine());
+
+Peça ao usuário para digitar o preço de um produto e o seu desconto em
+porcentagem, e armazene-os em variáveis double. Em seguida, calcule o
+preço final com o desconto e exiba-o na tela.
+
+Console.WriteLine("Digite a % do desconto");
+double porcentagem;
+porcentagem = double.Parse(Console.ReadLine());
+
+double total = produto - (produto * porcentagem / 100);
+Console.WriteLine("O valor do seu produto e " + total);
+
+Peça ao usuário para digitar uma palavra e armazene-a em uma variável
+string. Em seguida, exiba o comprimento da palavra na tela.
+
+Console.WriteLine("Digite uma palavra, iremos contar ela.");
+string palavra;
+palavra = Console.ReadLine();
+Console.WriteLine("O comprimento da palavra e " + palavra.Length);
+
+Peça ao usuário para digitar o seu endereço completo, incluindo o número da
+casa, rua, bairro, cidade e estado. Armazene cada informação em uma
+variável string e, em seguida, exiba todas as informações juntas em uma
+única linha.
+
+Console.Write("Digite o nome da rua: ");
+string rua = Console.ReadLine();
+
+Console.Write("Digite o número da casa: ");
+string numero = Console.ReadLine();
+
+Console.Write("Digite o bairro: ");
+string bairro = Console.ReadLine();
+
+Console.Write("Digite a cidade: ");
+string cidade = Console.ReadLine();
+
+Console.Write("Digite o estado: ");
+string estado = Console.ReadLine();
+
+Console.WriteLine($"Endereço completo: {rua}, nº {numero}, {bairro}, {cidade} - {estado}");
+
+
+

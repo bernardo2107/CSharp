@@ -1,0 +1,338 @@
+/*using System.Diagnostics.CodeAnalysis;
+
+namespace datetime
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("now");
+            Console.WriteLine (DateTime.Now);
+        }
+    }
+}
+*/
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite a primeira data (dd/MM/yyyy): ");
+        DateTime data1 = DateTime.Parse(Console.ReadLine());
+
+        Console.Write("Digite a segunda data (dd/MM/yyyy): ");
+        DateTime data2 = DateTime.Parse(Console.ReadLine());
+
+        TimeSpan diferenca = data2 - data1;
+
+        Console.WriteLine($"A diferença é de {Math.Abs(diferenca.Days)} dias.");
+    }
+}
+*/
+
+
+
+/*
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite sua data de nascimento (dd/MM/yyyy): ");
+        DateTime nascimento = DateTime.Parse(Console.ReadLine());
+
+        DateTime hoje = DateTime.Now;
+
+        int idade = hoje.Year - nascimento.Year;
+
+        if (nascimento.Date > hoje.AddYears(-idade).Date)
+        {
+            idade--;
+        }
+
+        Console.WriteLine($"Você tem {idade} anos.");
+    }
+}*/
+
+/*
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite uma data (dd/MM/yyyy): ");
+        DateTime data = DateTime.Parse(Console.ReadLine());
+
+        bool feriado = false;
+        string nomeFeriado = "";
+
+        if (data.Day == 1 && data.Month == 1)
+        {
+            feriado = true;
+            nomeFeriado = "Confraternização Universal";
+        }
+        else if (data.Day == 21 && data.Month == 4)
+        {
+            feriado = true;
+            nomeFeriado = "Tiradentes";
+        }
+        else if (data.Day == 1 && data.Month == 5)
+        {
+            feriado = true;
+            nomeFeriado = "Dia Mundial do Trabalho";
+        }
+        else if (data.Day == 7 && data.Month == 9)
+        {
+            feriado = true;
+            nomeFeriado = "Independência do Brasil";
+        }
+        else if (data.Day == 12 && data.Month == 10)
+        {
+            feriado = true;
+            nomeFeriado = "Nossa Senhora Aparecida";
+        }
+        else if (data.Day == 2 && data.Month == 11)
+        {
+            feriado = true;
+            nomeFeriado = "Finados";
+        }
+        else if (data.Day == 15 && data.Month == 11)
+        {
+            feriado = true;
+            nomeFeriado = "Proclamação da República";
+        }
+        else if (data.Day == 20 && data.Month == 11)
+        {
+            feriado = true;
+            nomeFeriado = "Dia Nacional de Zumbi e da Consciência Negra";
+        }
+        else if (data.Day == 25 && data.Month == 12)
+        {
+            feriado = true;
+            nomeFeriado = "Natal";
+        }
+
+        if (feriado)
+        {
+            Console.WriteLine($"É feriado nacional: {nomeFeriado}.");
+        }
+        else
+        {
+            Console.WriteLine("Não é feriado nacional.");
+        }
+    }
+}
+*/
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("MENU");
+        Console.WriteLine("1 - Olá");
+        Console.WriteLine("2 - Tudo bem?");
+        Console.WriteLine("3 - Até logo");
+
+        Console.Write("Escolha uma opção: ");
+        int opcao = int.Parse(Console.ReadLine());
+
+        switch (opcao)
+        {
+            case 1:
+                Console.WriteLine("Olá! Seja bem-vindo!");
+                break;
+
+            case 2:
+                Console.WriteLine("Tudo bem com você?");
+                break;
+
+            case 3:
+                Console.WriteLine("Até logo!");
+                break;
+
+            default:
+                Console.WriteLine("Opção inválida.");
+                break;
+        }
+    }
+}
+
+*/
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite um número inteiro: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        if (numero > 0)
+        {
+            Console.WriteLine("O número é positivo.");
+        }
+        else if (numero < 0)
+        {
+            Console.WriteLine("O número é negativo.");
+        }
+        else
+        {
+            Console.WriteLine("O número é zero.");
+        }
+    }
+}
+*/
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Escolha uma cor:");
+        Console.WriteLine("1 - Vermelho");
+        Console.WriteLine("2 - Azul");
+        Console.WriteLine("3 - Verde");
+
+        Console.Write("Digite uma opção: ");
+        int opcao = int.Parse(Console.ReadLine());
+
+        switch (opcao)
+        {
+            case 1:
+                Console.WriteLine("Você escolheu a cor vermelho.");
+                break;
+
+            case 2:
+                Console.WriteLine("Você escolheu a cor azul.");
+                break;
+
+            case 3:
+                Console.WriteLine("Você escolheu a cor verde.");
+                break;
+
+            default:
+                Console.WriteLine("Opção inválida.");
+                break;
+        }
+    }
+}
+*/
+
+/*using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite uma letra: ");
+        char letra = char.ToLower(char.Parse(Console.ReadLine()));
+
+        switch (letra)
+        {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                Console.WriteLine("A letra é uma vogal.");
+                break;
+
+            default:
+                Console.WriteLine("A letra é uma consoante.");
+                break;
+        }
+    }
+}
+*/
+
+
+/*
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite um número de 1 a 7: ");
+        int dia = int.Parse(Console.ReadLine());
+
+        switch (dia)
+        {
+            case 1:
+                Console.WriteLine("Domingo");
+                break;
+
+            case 2:
+                Console.WriteLine("Segunda-feira");
+                break;
+
+            case 3:
+                Console.WriteLine("Terça-feira");
+                break;
+
+            case 4:
+                Console.WriteLine("Quarta-feira");
+                break;
+
+            case 5:
+                Console.WriteLine("Quinta-feira");
+                break;
+
+            case 6:
+                Console.WriteLine("Sexta-feira");
+                break;
+
+            case 7:
+                Console.WriteLine("Sábado");
+                break;
+
+            default:
+                Console.WriteLine("Número inválido. Digite um número de 1 a 7.");
+                break;
+        }
+    }
+}
+*/
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Escolha o tamanho da camiseta:");
+        Console.WriteLine("P - Pequena");
+        Console.WriteLine("M - Média");
+        Console.WriteLine("G - Grande");
+
+        Console.Write("Digite o tamanho: ");
+        char tamanho = char.ToUpper(char.Parse(Console.ReadLine()));
+
+        switch (tamanho)
+        {
+            case 'P':
+                Console.WriteLine("Camiseta P - R$ 30,00");
+                break;
+
+            case 'M':
+                Console.WriteLine("Camiseta M - R$ 35,00");
+                break;
+
+            case 'G':
+                Console.WriteLine("Camiseta G - R$ 40,00");
+                break;
+
+            default:
+                Console.WriteLine("Tamanho inválido.");
+                break;
+        }
+    }
+}
+
+

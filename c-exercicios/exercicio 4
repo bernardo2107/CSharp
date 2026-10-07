@@ -1,0 +1,249 @@
+
+Console.WriteLine( "Bem vindo.Digite sua idade.");
+ int idade;
+  idade = int.Parse(Console.ReadLine()); 
+
+ if (idade >= 18 && idade <99 ) { Console.WriteLine("Acesso permitido sua idade é "+idade); }
+  
+  else { Console.WriteLine("Infelizmente você não pode continuar."); return; }
+
+Console.WriteLine("Você possui carteira de habilitação (sim)/(nao) ? ");
+string carteira = Console.ReadLine();
+
+if (carteira == "sim")
+{ Console.WriteLine("Bem vindo a volta rapida "); }
+else 
+{ Console.WriteLine("Ficou para proxima, muito obrigado"); }
+Console.WriteLine("Programa finalizado.");
+Environment.Exit(0); 
+
+
+
+
+Console.WriteLine("Bem vindo ao Compra certa.");
+Console.WriteLine("Digite seu nome ");
+string nome = Console.ReadLine();
+
+Console.WriteLine(" Agora "+nome+" Você possui algum valor acima de R$30000.00 ? Digite o valor exato");
+int valor;
+valor = int.Parse(Console.ReadLine());
+if (valor >= 30000.00)
+{
+    Console.WriteLine("Parabéns "+nome+" Você esta dentro dos nossos parametros para continuar. ");
+}
+else { Console.WriteLine("Infelizmente Sr(a) "+nome+" você não esta dentro dos nossos parametros."); return; }
+Console.WriteLine("Programa finalizado.");
+Environment.Exit(0); 
+
+
+
+
+
+Console.WriteLine("Bem vindo, digite seu nome para continuar");
+string nome = Console.ReadLine();
+Console.WriteLine("Digite sua idade agora");
+int idade; 
+idade= int.Parse(Console.ReadLine());
+if (idade >= 21) { Console.WriteLine(""); }
+else { Console.WriteLine("Infelizmente você não foi selecionado.");return; 
+}
+
+Console.WriteLine(nome + " Você e formado no ensino superior ? (Sim)/(Não)");
+string positivo = Console.ReadLine();
+
+if (positivo == "sim" || positivo == "Sim") { Console.WriteLine("Seja bem vindo(a) " + nome + " você e 10"); }
+
+else {Console.WriteLine("Você nao foi selecionado, tente na proxima vez. "); return;}
+Console.WriteLine("Programa finalizado.");
+Environment.Exit(0); 
+
+
+Console.WriteLine("Digite seu nome para continuar.");
+string nome = Console.ReadLine();
+Console.WriteLine("Você e assinante do GatoFlix? ");
+string verdadeiro = Console.ReadLine();
+if
+(verdadeiro == "sim" || verdadeiro =="Sim"){ Console.WriteLine("Você assiste alguma serie no GatoFlix ? "); }
+
+else { Console.WriteLine("Obrigado por sua participação"); }
+
+Console.WriteLine("Digite a sua serie favorita");
+string serie = Console.ReadLine();
+Console.WriteLine("Sua serie " + serie + " já tem uma nova temporada aproveite");
+
+
+Console.WriteLine("Digite seu nome para continuar.");
+string nome = Console.ReadLine();
+Console.WriteLine("Você e assinante do GatoFlix "+nome+" ?");
+string verdadeiro = Console.ReadLine();
+if
+(verdadeiro == "sim" || verdadeiro == "Sim") { Console.WriteLine("Você assiste alguma serie no GatoFlix "+nome+ " ?");
+    Console.WriteLine("Digite a sua serie favorita");
+    string serie = Console.ReadLine();
+
+    Console.WriteLine(" A " +serie+ "," +nome + " já tem uma nova temporada aproveite.");
+}
+
+else { Console.WriteLine("Obrigado por sua participação"); return; }
+
+
+  /*e) Escreva um programa que solicite ao usuário o seu nome e idade. O
+            programa deve verificar se o nome possui mais de 3 caracteres e se a idade é
+            maior ou igual a 18 anos. Se ambas as condições forem verdadeiras, o
+            programa deve imprimir &quot;Acesso permitido&quot;. Caso contrário, deve imprimir
+            &quot;Acesso negado&quot;.*/
+            Console.WriteLine("Digite seu nome de usuario:");
+            string usuario = Console.ReadLine();
+            Console.WriteLine("Digite sua idade: ");
+            int idade3 = int.Parse(Console.ReadLine());
+            if (idade3 < 18 && usuario.Length < 3)
+            {
+                Console.WriteLine("Acesso negado.");
+            }
+            else
+            {
+                Console.WriteLine("Acesso permitido.");
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*f) Escreva um programa que pergunte ao usuário se ele deseja adicionar açúcar
+            ou leite ao seu café. Se o usuário responder que deseja adicionar açúcar OU
+            leite, o programa deve imprimir a mensagem &quot;Café com adicional
+            preparado!&quot;..*/
+            Console.WriteLine("Voce deseja adicionar leite ou açucar no seu café?");
+            Console.WriteLine("Se não quiser apenas digite N.");
+            string adicional = Console.ReadLine()?.ToLower();
+            if(adicional.Length == 1 || adicional.Length == 3)
+            {
+                Console.WriteLine("Café padrão saindo!");
+            }
+            else
+            {
+                Console.WriteLine("Café com adicional saindo!");                
+            }
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*g) Crie um programa que solicite ao usuário um número inteiro e verifique se
+            ele é divisível por 3 OU por 5. Se o número for divisível por 3 OU por 5, o
+            programa deve imprimir a mensagem &quot;O número é divisível por 3 ou por
+            5!&quot;..*/
+            Console.WriteLine("Digite um numero para saber se ele é divisivel por 3 ou 5.");
+            int n = int.Parse(Console.ReadLine());
+
+            string resposta = (n % 3 == 0 && n % 5 == 0) ? "Divisivel pelos 2 numeros" : (n % 3 == 0) ? "Divisivel apenas por 3" : (n % 5 == 0) ? "Divisivel apenas por 5" : "nenhum";
+
+            Console.WriteLine(resposta);
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*h) Escreva um programa que pergunte ao usuário se ele deseja comprar um
+            produto. Se o usuário responder &quot;sim&quot; OU &quot;s&quot;, o programa deve imprimir a
+            mensagem &quot;Obrigado pela compra!&quot;..*/
+            Console.WriteLine("Voce confirma a compra?");
+            string confirma = Console.ReadLine()?.ToLower();
+            while(confirma != "s" && confirma != "n" && confirma != "nao" && confirma != "sim")
+            {
+                Console.WriteLine("Por favor digite sim S ou nao N");
+                confirma = Console.ReadLine()?.ToLower();
+            }
+            string compra = (confirma == "n" || confirma == "nao") ? "Compra negada" : "Obrigado pela compra!";
+            Console.WriteLine(compra);
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*i) Crie um programa que solicite ao usuário o seu nome e verifique se ele é
+            igual a &quot;Wilson&quot; OU &quot;Gloria&quot;. Se o nome for igual a &quot;Wilson&quot; OU &quot;Gloria&quot;,
+            o programa deve imprimir a mensagem &quot;Olá, bem-vindo(a) de volta!&quot;..*/
+            Console.WriteLine("Digite seu nome de usuario: ");
+            string usuario1 = Console.ReadLine();
+            string acesso = (usuario1 == "Wilson" || usuario1 == "Gloria") ? "Acesso permitido" : "Acesso negado";
+            Console.WriteLine(acesso);
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+            /*j) Escreva um programa que solicite ao usuário um número inteiro e verifique
+            se ele é maior do que 10 OU menor do que 0. Se o número for maior do que
+            10 OU menor do que 0, o programa deve imprimir a mensagem &quot;Número
+            inválido!&quot;.*/
+            Console.WriteLine("Digite um numero inteiro");
+            int num = int.Parse(Console.ReadLine());
+            string r2 = (num < 0 || num > 10) ? "Numero invalido" : "Numero dentro dos parametros (0 a 10)";
+            Console.WriteLine(r2);
+            Console.WriteLine("---------------Pressione Enter para prosseguir----------------");
+            Console.ReadLine();
+            Console.Clear();
+
+
+
+
+/*k) Escreva um programa que pergunte ao usuário se ele não é um robô. Se a
+resposta for negativa, o programa deve imprimir &quot;Por favor, prove que você
+não é um robô&quot;.*/
+console.WriteLine("Bem vindo sr(a) Robô");
+Console.WriteLine("Você se considera um robô ? (Sim)/ (Não)");
+string robo = Console.ReadLine();
+if
+    (robo == "sim" || robo == "Sim" || robo == "SIM") { Console.WriteLine("Sabia você nunca me enganou, morra ......."); }
+else { Console.WriteLine("Não sei se posso confiar.... porem acesso liberado."); }
+
+
+
+
+
+/*l) Crie um programa que peça ao usuário para digitar um número e verifique se
+ele não é igual a zero. Se a condição for verdadeira, o programa deve
+imprimir &quot;O número é diferente de zero&quot;.*/
+Console.WriteLine("Digite um numero");
+int num;
+num = int.Parse(Console.ReadLine());
+
+if
+    (num == 0) { Console.WriteLine("Seu numero e = " + num);return; }
+else { Console.WriteLine("Seu numero e diferente de 0, seu numero e " + num); return; }*/
+
+/*m) Escreva um programa que pergunte ao usuário se ele não é um membro
+inativo de um clube. Se a resposta for negativa, o programa deve imprimir
+&quot;Por favor, atualize sua inscrição para continuar usufruindo dos benefícios
+do clube&quot;.*/
+/*Console.WriteLine("Você é um membro inativo do clube? (Sim/Não)");
+string resposta = Console.ReadLine();
+
+if (resposta == "Não" || resposta == "não")
+{
+    Console.WriteLine("Por favor, atualize sua inscrição para continuar usufruindo dos benefícios do clube");
+}
+else { Console.WriteLine("Bem vindo de volta");}
+
+/*n) Crie um programa que peça ao usuário para digitar uma palavra e verifique
+se ela não é vazia. Se a condição for verdadeira, o programa deve imprimir
+&quot;A palavra não é vazia&quot;.*/
+Console.WriteLine("Digite uma palavra:");
+string palavra = Console.ReadLine();
+
+if (!string.IsNullOrEmpty(palavra))
+{
+    Console.WriteLine("A palavra não é vazia");
+}
+
+/*o) Escreva um programa que pergunte ao usuário se ele não deseja cancelar
+uma operação. Se a resposta for negativa, o programa deve imprimir &quot;Por
+favor, confirme o cancelamento da operação&quot;.*/
+Console.WriteLine("Você não deseja cancelar a operação? (Sim/Não)");
+string resposta = Console.ReadLine();
+
+if (resposta == "Não" || resposta == "não")
+{
+    Console.WriteLine("Por favor, confirme o cancelamento da operação");
+
+}
+else { Console.WriteLine("Vamos seguir em frente ..."); }
+        }
+    }
+}

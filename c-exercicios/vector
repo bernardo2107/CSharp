@@ -1,0 +1,506 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_A
+    {
+        public static void Executar()
+        {
+            Console.WriteLine("--- EXERCÍCIO A: Vetor de Inteiros ---");
+
+            // 1. Declaração e inicialização do vetor de inteiros
+            int[] numeros = { 10, 20, 30, 40, 50, 60, 70 };
+
+            Console.WriteLine("Valores armazenados no vetor:\n");
+
+            // 2. Percorrendo o vetor e imprimindo cada elemento usando foreach
+            int indice = 0;
+            foreach (int numero in numeros)
+            {
+                Console.WriteLine($"Elemento na posição [{indice}]: {numero}");
+                indice++;
+            }
+        }
+    }
+}
+
+
+              ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_B
+    {
+        public static void Executar()
+        {
+            int quantidadeAlunos = 5;
+
+            // Declaração dos vetores para armazenar os dados de cada aluno
+            string[] nomes = new string[quantidadeAlunos];
+            double[] notas1 = new double[quantidadeAlunos];
+            double[] notas2 = new double[quantidadeAlunos];
+            double[] medias = new double[quantidadeAlunos];
+
+            // 1. Leitura dos dados dos 5 alunos
+            for (int i = 0; i < quantidadeAlunos; i++)
+            {
+                Console.WriteLine($"--- Aluno {i + 1} de {quantidadeAlunos} ---");
+
+                Console.Write("Nome: ");
+                nomes[i] = Console.ReadLine();
+
+                Console.Write("Digite a 1ª nota: ");
+                notas1[i] = double.Parse(Console.ReadLine());
+
+                Console.Write("Digite a 2ª nota: ");
+                notas2[i] = double.Parse(Console.ReadLine());
+
+                // Cálculo da média do aluno
+                medias[i] = (notas1[i] + notas2[i]) / 2.0;
+
+                Console.WriteLine(); // Linha em branco
+            }
+
+            // 2. Exibição da listagem final
+            Console.WriteLine("=================================================");
+            Console.WriteLine("               LISTAGEM DOS ALUNOS               ");
+            Console.WriteLine("=================================================");
+            Console.WriteLine($"{"NOME",-20} | {"NOTA 1",-8} | {"NOTA 2",-8} | {"MÉDIA",-8}");
+            Console.WriteLine("-------------------------------------------------");
+
+            for (int i = 0; i < quantidadeAlunos; i++)
+            {
+                Console.WriteLine($"{nomes[i],-20} | {notas1[i],8:F1} | {notas2[i],8:F1} | {medias[i],8:F1}");
+            }
+
+            Console.WriteLine("=================================================");
+        }
+    }
+}
+
+      ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_C
+    {
+        public static void Executar()
+        {
+            // 1. Declaração e inicialização do vetor com números decimais
+            double[] numeros = { 7.5, 8.2, 5.0, 9.4, 6.8, 10.0 };
+
+            // 2. Cálculo da soma utilizando um laço de repetição
+            double soma = 0.0;
+            foreach (double num in numeros)
+            {
+                soma += num;
+            }
+
+            // 3. Cálculo da média (soma dividida pelo número total de elementos)
+            double media = soma / numeros.Length;
+
+            // Exibição dos resultados
+            Console.WriteLine("Valores do vetor: " + string.Join(" | ", numeros));
+            Console.WriteLine($"Soma total: {soma:F2}");
+            Console.WriteLine($"Média dos valores: {media:F2}");
+        
+        }
+    }
+}
+      ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_D
+    {
+        public static void Executar()
+        {
+            // 1. Declaração e inicialização do vetor de inteiros
+            int[] numeros = { 15, 42, 8, 99, 23, 67, 4 };
+
+            // 2. Assume que o primeiro elemento é o maior
+            int maior = numeros[0];
+
+            // 3. Percorre o vetor comparando com o maior atual
+            for (int i = 1; i < numeros.Length; i++)
+            {
+                if (numeros[i] > maior)
+                {
+                    maior = numeros[i];
+                }
+            }
+
+            // Exibição do resultado
+            Console.WriteLine("Valores do vetor: " + string.Join(", ", numeros));
+            Console.WriteLine($"\nO maior valor encontrado é: {maior}");
+        }
+    }
+}
+              
+              
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_E
+    {
+        public static void Executar()
+        {
+            // 1. Declaração e inicialização do vetor de inteiros
+            int[] numeros = { 45, 12, 89, 3, 27, 64, 18 };
+
+            // 2. Assume que o primeiro elemento é o menor
+            int menor = numeros[0];
+
+            // 3. Percorre o vetor comparando com o menor atual
+            for (int i = 1; i < numeros.Length; i++)
+            {
+                if (numeros[i] < menor)
+                {
+                    menor = numeros[i];
+                }
+            }
+
+            // Exibição do resultado
+            Console.WriteLine("Valores do vetor: " + string.Join(", ", numeros));
+            Console.WriteLine($"\nO menor valor encontrado é: {menor}");
+        }
+    }
+}
+
+              ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_E
+    {
+        public static void Executar()
+        {
+            // 1. Declaração e inicialização do vetor de inteiros
+            int[] numeros = { 45, 12, 89, 3, 27, 64, 18 };
+
+            // 2. Assume que o primeiro elemento é o menor
+            int menor = numeros[0];
+
+            // 3. Percorre o vetor comparando com o menor atual
+            for (int i = 1; i < numeros.Length; i++)
+            {
+                if (numeros[i] < menor)
+                {
+                    menor = numeros[i];
+                }
+            }
+
+            // Exibição do resultado
+            Console.WriteLine("Valores do vetor: " + string.Join(", ", numeros));
+            Console.WriteLine($"\nO menor valor encontrado é: {menor}");
+        }
+    }
+}
+
+              ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_F
+    {
+        public static void Executar()
+        {
+            const int tamanho = 5;
+
+            // Declaração dos vetores
+            int[] vetorA = new int[tamanho];
+            int[] vetorB = new int[tamanho];
+            int[] vetorSoma = new int[tamanho];
+
+            // 1. Leitura dos elementos do primeiro vetor (Vetor A)
+            Console.WriteLine("--- Preenchendo o VETOR A ---");
+            for (int i = 0; i < tamanho; i++)
+            {
+                Console.Write($"Digite o {i + 1}º número: ");
+                vetorA[i] = int.Parse(Console.ReadLine());
+            }
+
+            // 2. Leitura dos elementos do segundo vetor (Vetor B)
+            Console.WriteLine("\n--- Preenchendo o VETOR B ---");
+            for (int i = 0; i < tamanho; i++)
+            {
+                Console.Write($"Digite o {i + 1}º número: ");
+                vetorB[i] = int.Parse(Console.ReadLine());
+            }
+
+            // 3. Processamento: Gerando o Vetor Soma
+            for (int i = 0; i < tamanho; i++)
+            {
+                vetorSoma[i] = vetorA[i] + vetorB[i];
+            }
+
+            // 4. Exibição do resultado
+            Console.WriteLine("\n=================================");
+            Console.WriteLine("        RESULTADO DA SOMA        ");
+            Console.WriteLine("=================================");
+            Console.WriteLine("Vetor A:    " + string.Join(" | ", vetorA));
+            Console.WriteLine("Vetor B:    " + string.Join(" | ", vetorB));
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("Vetor Soma: " + string.Join(" | ", vetorSoma));
+            Console.WriteLine("=================================");
+        }
+    }
+
+
+      ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_G
+    {
+        public static void Executar()
+        {
+            int tamanho = 5;
+
+            // 1. Definição dos dois vetores base
+            int[] vetor1 = new int[tamanho];
+            int[] vetor2 = new int[tamanho];
+            int[] vetorSoma = new int[tamanho];
+
+            // Leitura dos dados do Primeiro Vetor
+            Console.WriteLine("--- Digite os 5 valores do Primeiro Vetor ---");
+            for (int i = 0; i < tamanho; i++)
+            {
+                Console.Write($"Vetor 1 - Posição [{i}]: ");
+                vetor1[i] = int.Parse(Console.ReadLine());
+            }
+
+            // Leitura dos dados do Segundo Vetor
+            Console.WriteLine("\n--- Digite os 5 valores do Segundo Vetor ---");
+            for (int i = 0; i < tamanho; i++)
+            {
+                Console.Write($"Vetor 2 - Posição [{i}]: ");
+                vetor2[i] = int.Parse(Console.ReadLine());
+            }
+
+            // 2. Cálculo do Vetor Soma
+            for (int i = 0; i < tamanho; i++)
+            {
+                vetorSoma[i] = vetor1[i] + vetor2[i];
+            }
+
+            // 3. Exibição dos Vetores
+            Console.WriteLine("\n==================================");
+            Console.WriteLine("Vetor 1:    [" + string.Join(", ", vetor1) + "]");
+            Console.WriteLine("Vetor 2:    [" + string.Join(", ", vetor2) + "]");
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Vetor Soma: [" + string.Join(", ", vetorSoma) + "]");
+            Console.WriteLine("==================================");
+        }
+    }
+}
+
+      ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_H
+    {
+        public static void Executar()
+        {
+            // 1. Declaração e inicialização do vetor de inteiros
+            int[] numeros = { 15, 3, 89, 42, 7, 64, 21 };
+
+            Console.WriteLine("Vetor original: " + string.Join(", ", numeros));
+
+            // 2. Ordena o vetor em ordem crescente primeiro
+            Array.Sort(numeros);
+
+            // 3. Inverte a ordem dos elementos para ficar decrescente
+            Array.Reverse(numeros);
+
+            // Exibição do resultado
+            Console.WriteLine("\nVetor em ordem decrescente: " + string.Join(", ", numeros));
+        }
+    }
+}
+
+      ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_I
+    {
+        public static void Executar()
+        {
+            const int totalNomes = 10;
+            string[] nomes = new string[totalNomes];
+
+            // 1. Entrada de dados: Leitura dos 10 nomes
+            Console.WriteLine($"--- Digite {totalNomes} nomes ---");
+            for (int i = 0; i < totalNomes; i++)
+            {
+                Console.Write($"Nome {i + 1}: ");
+                nomes[i] = Console.ReadLine();
+            }
+
+            // 2. Exibição da listagem dos nomes
+            Console.WriteLine("\n=================================");
+            Console.WriteLine("        LISTAGEM DE NOMES        ");
+            Console.WriteLine("=================================");
+
+            for (int i = 0; i < totalNomes; i++)
+            {
+                Console.WriteLine($"{i + 1,2}. {nomes[i]}");
+            }
+
+            Console.WriteLine("=================================");
+        }
+    }
+}
+
+      ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_09.Exercicios
+{
+    internal class Exercicio_J
+    {
+        public static void Executar()
+        {
+            const int TOTAL_MERCADORIAS = 40;
+
+            // Vetores paralelos para armazenar os dados do estoque
+            string[] nomes = new string[TOTAL_MERCADORIAS];
+            int[] quantidades = new int[TOTAL_MERCADORIAS];
+            double[] precios = new double[TOTAL_MERCADORIAS];
+
+            bool cadastradas = false; // Controle para saber se já houve cadastro
+            int opcao = 0;
+
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("=================================");
+                Console.WriteLine("              MENU               ");
+                Console.WriteLine("=================================");
+                Console.WriteLine("1. Cadastra mercadorias");
+                Console.WriteLine("2. Exibe valor total em mercadorias da empresa");
+                Console.WriteLine("3. Sair");
+                Console.WriteLine("=================================");
+                Console.Write("OPÇÃO: ");
+
+                if (!int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    opcao = 0; // Opção inválida se não for número
+                }
+
+                Console.WriteLine();
+
+                switch (opcao)
+                {
+                    case 1:
+                        Console.WriteLine($"--- CADASTRO DE {TOTAL_MERCADORIAS} MERCADORIAS ---");
+                        for (int i = 0; i < TOTAL_MERCADORIAS; i++)
+                        {
+                            Console.WriteLine($"\nMercadoria {i + 1} de {TOTAL_MERCADORIAS}:");
+
+                            Console.Write("Nome: ");
+                            nomes[i] = Console.ReadLine();
+
+                            Console.Write("Quantidade em estoque: ");
+                            while (!int.TryParse(Console.ReadLine(), out quantidades[i]) || quantidades[i] < 0)
+                            {
+                                Console.Write("Quantidade inválida! Digite um número inteiro (>= 0): ");
+                            }
+
+                            Console.Write("Preço unitário (R$): ");
+                            while (!double.TryParse(Console.ReadLine(), out precios[i]) || precios[i] < 0)
+                            {
+                                Console.Write("Preço inválido! Digite um valor numérico (>= 0): ");
+                            }
+                        }
+
+                        cadastradas = true;
+                        Console.WriteLine("\nTodas as mercadorias foram cadastradas com sucesso!");
+                        break;
+
+                    case 2:
+                        if (!cadastradas)
+                        {
+                            Console.WriteLine("Nenhuma mercadoria foi cadastrada ainda! Escolha a opção 1 primeiro.");
+                        }
+                        else
+                        {
+                            double valorTotalEmpresa = 0.0;
+
+                            Console.WriteLine("--- VALOR TOTAL DO ESTOQUE ---");
+                            for (int i = 0; i < TOTAL_MERCADORIAS; i++)
+                            {
+                                double valorSubtotal = quantidades[i] * precios[i];
+                                valorTotalEmpresa += valorSubtotal;
+                            }
+
+                            Console.WriteLine($"O valor total em mercadorias da empresa é: R$ {valorTotalEmpresa:N2}");
+                        }
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Saindo do sistema... Até logo!");
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida! Escolha 1, 2 ou 3.");
+                        break;
+                }
+
+                if (opcao != 3)
+                {
+                    Console.WriteLine("\nPressione qualquer tecla para continuar...");
+                    Console.ReadKey();
+                }
+
+            } while (opcao != 3);
+        }
+    }
+}
+              
