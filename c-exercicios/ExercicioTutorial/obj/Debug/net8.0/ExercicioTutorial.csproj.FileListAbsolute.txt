@@ -1,0 +1,14 @@
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\bin\Debug\net8.0\ExercicioTutorial.exe
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\bin\Debug\net8.0\ExercicioTutorial.deps.json
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\bin\Debug\net8.0\ExercicioTutorial.runtimeconfig.json
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\bin\Debug\net8.0\ExercicioTutorial.dll
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\bin\Debug\net8.0\ExercicioTutorial.pdb
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\ExercicioTutorial.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\ExercicioTutorial.AssemblyInfoInputs.cache
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\ExercicioTutorial.AssemblyInfo.cs
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\ExercicioTutorial.csproj.CoreCompileInputs.cache
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\ExercicioTutorial.dll
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\refint\ExercicioTutorial.dll
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\ExercicioTutorial.pdb
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\ExercicioTutorial.genruntimeconfig.cache
+C:\Users\EBB2NL314\Desktop\Atividades c#\ExercicioTutorial\obj\Debug\net8.0\ref\ExercicioTutorial.dll
